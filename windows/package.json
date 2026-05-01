@@ -1,0 +1,20 @@
+{
+  "name": "arduinouno-master-smoker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "bin": "server.js",
+  "scripts": {
+    "build": "pkg . --targets node18-win-x64 --output ArduinoUnoMasterSmoker.exe"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "src/main.cpp"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs-extra": "^11.3.4",
+    "serialport": "^13.0.0"
+  }
+}
